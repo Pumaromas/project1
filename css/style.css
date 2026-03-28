@@ -1,0 +1,88 @@
+body {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.award {
+    position: relative;
+    display: flex;
+    background-color: #ffeeee;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+}
+
+.award__p {
+    display: inline-block;
+    font-size: 15px;
+}
+
+.award__close {
+    width: 100%;
+}
+
+.award__icons {
+    position: absolute;
+    right: 40px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.award__close:hover {
+    fill: red;
+}
+
+.menu, .after__menu {
+    text-transform: capitalize;
+}
+
+.footer {
+    height: 72px;
+    background: #00353B;
+    color: white;
+    font-size: 16px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list__menu {
+    display: flex;
+    gap: 20px;
+}
+
+.after__menu {
+    position: absolute;
+    right: 60px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+
+}
+
+.after__menu svg {
+    display: inline-block;
+    width: 19px;
+    height: 29px;
+    fill: white;
+    vertical-align: middle;
+}
+
+.after__menu > .signup a {
+    display: inline-block;
+    width: 106px;
+    height: 50px;
+    color: black;
+    border-radius: 8px;
+    background: #ffeeee;
+    text-align: center;
+    line-height: 50px;
+}
+
+.after__menu > .signup a:hover {
+    background: red;
+    color: white;
+    font-size: 1.1em;
+}
