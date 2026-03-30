@@ -37,20 +37,47 @@ body {
     text-transform: capitalize;
 }
 
-.footer {
-    height: 72px;
-    background: #00353B;
-    color: white;
-    font-size: 16px;
+.wrapper {
     position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
     display: flex;
+    height: 100%;
     justify-content: center;
     align-items: center;
+}
+
+.header {
+    background: #00353B;
+    height: 72px;
+    color: white;
+    font-size: 16px;
+    border-bottom: 2px solid white;
 }
 
 .list__menu {
     display: flex;
     gap: 20px;
+}
+
+.item__menu a {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.signup a {
+    display: block;
+    transition: transform 0.2s ease;
+    
+}
+
+.item__menu > a:hover {
+    color: rgb(255, 94, 0);
+    text-shadow:
+        1px 1px 2px black,
+        0 0 1em white,
+        0 0 0.2em white;
+    transform: scale(1.3);
 }
 
 .after__menu {
@@ -71,19 +98,197 @@ body {
     vertical-align: middle;
 }
 
-.after__menu > .signup a {
-    display: inline-block;
+.after__menu > .signup {
     width: 106px;
     height: 50px;
     color: black;
     border-radius: 8px;
     background: #ffeeee;
     text-align: center;
-    line-height: 50px;
+    line-height: 30px;
+    padding: 9px;
 }
 
-.after__menu > .signup a:hover {
+.after__menu .signup:hover {
     background: red;
+}
+
+.after__menu .signup:hover a {
     color: white;
-    font-size: 1.1em;
+    text-shadow:
+        1px 1px 2px black,
+        0 0 1em white,
+        0 0 0.2em white;
+    padding: 0;
+    transform: scale(1.5);
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 48px;
+}
+
+.green__bc {
+    background: #00353B;
+}
+
+.head__main {
+    font-size: 56px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.head__text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+.home__image {
+    width: 600px;
+    position: relative;
+}
+
+.home__img {
+    width: 100%;
+}
+
+.home__layer__image {
+    position: absolute;
+    top: 310px;
+    left: -100px;
+}
+
+.home__left {
+    width: 600px;
+    min-height: 398px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.home {
+    max-height: 640px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 80px;
+}
+
+.home__btns {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 5px;
+}
+
+.explore {
+    text-transform: capitalize;
+    background-color: #22A45A;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 13px 25px;
+    color: white;
+}
+
+.watch__btn {
+    cursor: pointer;
+    display: flex;
+    width: 130px;
+    align-items: center;
+    gap: 10px;
+}
+
+.watch__btn:hover {
+    opacity: 0.8;
+}
+
+.video__box {
+    display: none;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+#videoToggle:checked ~ .home__left .video__box {
+    display: block;
+    max-height: 310px;
+    max-width: 600px;
+    opacity: 1;
+}
+
+
+video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.watch__btn svg {
+    display: inline-block;
+    width: 24px;
+    fill: white;
+    pointer-events: none;
+}
+
+.rewiews {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+.rewiews__images {
+    position: relative;
+    width: 160px;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+}
+.rewiews__img {
+    display: block;
+    width: 48px;
+    height: 48px;
+    transition: transform 0.2s ease;
+}
+
+.rewiews__img:nth-child(2n) {
+    position: absolute;
+    z-index: 0;
+}
+
+.rewiews__img-2 {
+    left: 20px;
+}
+
+.rewiews__img-4 {
+    right: 20px;
+}
+
+.rewiews__img:hover {
+    z-index: 1;
+    transform: scale(1.5);
+}
+
+.rewiews__rating {
+    height: 48px;
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rewiews__rating__icons {
+    font-size: 18px;
+    color: yellow;
+}
+
+.footer__text {
+    margin: 50px;
+    text-align: center;
+    color: white;
 }
